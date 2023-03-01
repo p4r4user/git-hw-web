@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>p4r4_Calculator</title>
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="wrapper-input">
+				<input
+					style="margin-right: 40px"
+					type="number"
+					name="text"
+					class="input field-1"
+					placeholder="Num_1"
+				/>
+				<input
+					type="number"
+					name="text"
+					class="input field-2"
+					placeholder="Num_2"
+				/>
+			</div>
+			<div class="wrapper-button">
+				<div class="line" style="padding-top: 10px;">p4r4user -- bash -- 1488x420</div>
+				<div class="wrapper-circle">
+					<div class="circle circle-red"></div>
+					<div class="circle circle-orange"></div>
+					<div class="circle circle-green"></div>
+				</div>
+
+				<button class="button">Num_1 + Num_2<br>(add):<br> <span class="plus"></span></button>
+				<button class="button">Num_1 * Num_2<br>(multiply):<br> <span class="mult"></span></button>
+				<button class="button">Num_1 - Num_2<br>(subtruct):<br> <span class="minus"></span></button>
+				<button class="button">Num_1 / Num_2<br>(divide):<br> <span class="divide"></span></button>
+				<button class="button">Num_1^Num_2<br>(power):<br> <span class="pow"></span></button>
+				<button class="button">Num_1^[1/Num_2]<br>(n-root from):<br> <span class="sqrt"></span></button>
+			</div>
+		</div>
+
+		<script src="index.js"></script>
+	</body>
+</html>

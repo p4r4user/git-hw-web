@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@600&display=swap');
+
+body {
+	background-color: #00705e;
+	font-family: 'JetBrains Mono', monospace;
+}
+
+.container {
+	margin: 50px auto;
+	text-align: center;
+	background: #333;
+	width: 700px;
+	padding: 100px 0;
+	border-radius: 20px;
+	overflow: hidden;
+	box-shadow: 5px 5px 15px #000;
+}
+
+.line {
+	position: relative;
+	top: -190px;
+	left: 0;
+	background: #ccc;
+	width: 100%;
+	height: 30px;
+}
+
+.wrapper-circle {
+	display: flex;
+	position: relative;
+	top: -217px;
+	left: -290px;
+}
+
+
+
+.circle {
+	background: #000;
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	margin-right: 10px;
+}
+
+.circle-red {
+	background: #EA695E;
+}
+
+.circle-orange {
+	background: #EDB84C;
+}
+
+.circle-green {
+	background: #63C054 ;
+}
+
+
+.input {
+	border: none;
+	border-radius: 15px;
+	padding: 15px;
+	background-color: #e8e8e8;
+	-webkit-box-shadow: 6px 6px 12px #fff,
+	-6px -6px 12px #c5c5c5;
+	box-shadow: 6px 6px 12px #fff,
+	-6px -6px 12px #c5c5c5;
+	font-size: medium;
+	font-weight: bold;
+	max-width: 200px;
+	margin-bottom: 40px;
+}
+
+.input:focus {
+	outline-color: #fff;
+}
+
+
+.button {
+	border-radius: 7px;
+	border: none;
+	background: #18ffd5;
+	color: #000;
+	font-family: inherit;
+	text-align: center;
+	font-size: 17px;
+	box-shadow: 0 14px 56px -11px #18ffd5;
+	width: 14em;
+	padding: 1em;
+	transition: all 0.4s;
+	cursor: pointer;
+	margin-bottom: 20px;
+	font-weight: 700;
+	letter-spacing: 2px;
+}
+
+.wrapper-button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
