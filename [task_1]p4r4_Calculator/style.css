@@ -1,10 +1,14 @@
+/* Імпорт шрифту JetBrains Mono */
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@600&display=swap');
 
+
+/* Опис тла сайту, вибір кольору та шрифту */
 body {
 	background-color: #00705e;
 	font-family: 'JetBrains Mono', monospace;
 }
 
+/* Налаштування загального позиціювання та створення "тла терміналу", заокруглення, відступи, додавання тінней і таке інше*/
 .container {
 	margin: 50px auto;
 	text-align: center;
@@ -16,6 +20,7 @@ body {
 	box-shadow: 5px 5px 15px #000;
 }
 
+/* Налаштування лінії вікна терміналу */
 .line {
 	position: relative;
 	top: -190px;
@@ -25,6 +30,7 @@ body {
 	height: 30px;
 }
 
+/* Налаштування блоку 3-ьох кружків */
 .wrapper-circle {
 	display: flex;
 	position: relative;
@@ -33,7 +39,7 @@ body {
 }
 
 
-
+/* Налаштування кружка */
 .circle {
 	background: #000;
 	width: 15px;
@@ -42,6 +48,7 @@ body {
 	margin-right: 10px;
 }
 
+/* Різні кружки */
 .circle-red {
 	background: #EA695E;
 }
@@ -54,7 +61,7 @@ body {
 	background: #63C054 ;
 }
 
-
+/* Налаштування поля вводу, заокруглення, вдіпступи, колір, тінь, шрифт і таке інше */
 .input {
 	border: none;
 	border-radius: 15px;
@@ -70,11 +77,12 @@ body {
 	margin-bottom: 40px;
 }
 
+/* Коли вибираєш вікно для вводу */
 .input:focus {
-	outline-color: #fff;
+	outline-color: #92e1d2;
 }
 
-
+/* Кнопки результатів */
 .button {
 	border-radius: 7px;
 	border: none;
@@ -92,7 +100,7 @@ body {
 	font-weight: 700;
 	letter-spacing: 2px;
 }
-
+/* Налаштування блоку з кнопками */
 .wrapper-button {
 	display: flex;
 	justify-content: center;

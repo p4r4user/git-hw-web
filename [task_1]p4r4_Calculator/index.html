@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<!-- Налаштування заголовку з кодування ютф-8, з моєю назвою та підключеним стилем CSS -->
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,8 +9,11 @@
 		<link rel="stylesheet" href="./style.css" />
 	</head>
 	<body>
+		<!--Контейнер що містить усе що є на сторінці-->
 		<div class="container">
+			<!-- Обгортка вводу для створення полей вводу двох чисел, з завчасно прописаними стилями, маркування класом  input field-1 та input field-2-->
 			<div class="wrapper-input">
+				<!-- input field-1 -->
 				<input
 					style="margin-right: 40px"
 					type="number"
@@ -17,6 +21,7 @@
 					class="input field-1"
 					placeholder="Num_1"
 				/>
+				<!-- input field-2 -->
 				<input
 					type="number"
 					name="text"
@@ -24,14 +29,18 @@
 					placeholder="Num_2"
 				/>
 			</div>
+			<!--  Контейнер що містить в собі дизайнерське рішення щодо терміналу(3 кружочки, лінія вікна зверху, та надпис на ньому)-->
 			<div class="wrapper-button">
+				<!-- Лінія та надпис -->
 				<div class="line" style="padding-top: 10px;">p4r4user -- bash -- 1488x420</div>
+				<!-- Кружочки -->
 				<div class="wrapper-circle">
 					<div class="circle circle-red"></div>
 					<div class="circle circle-orange"></div>
 					<div class="circle circle-green"></div>
 				</div>
 
+				<!-- Перечислення результатів математичних дій та надписи до них -->
 				<button class="button">Num_1 + Num_2<br>(add):<br> <span class="plus"></span></button>
 				<button class="button">Num_1 * Num_2<br>(multiply):<br> <span class="mult"></span></button>
 				<button class="button">Num_1 - Num_2<br>(subtruct):<br> <span class="minus"></span></button>
@@ -40,7 +49,7 @@
 				<button class="button">Num_1^[1/Num_2]<br>(n-root from):<br> <span class="sqrt"></span></button>
 			</div>
 		</div>
-
+		<!-- Підключення джаваскріпту -->
 		<script src="index.js"></script>
 	</body>
 </html>
