@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@600&display=swap');
 // Описуємо тло, відключаємо гладкість тексту, встановлюємо шрифт, та плавну анімацію
 body {
     background: #448cd0;
     color: rgba(0, 0, 0, 0.6);
-    font-family: JetBrains Mono sans-serif;
+    font-family: 'JetBrains Mono', monospace;
     font-size: 14px;
     line-height: 1.6em;
     -webkit-font-smoothing: antialiased;
@@ -17,7 +18,7 @@ body {
     color: #448cd0;
     font-size: 14px;
     font-style: bold;
-    font-family: JetBrains Mono;
+    font-family: 'JetBrains Mono';
     font-weight: 500;
     text-decoration: none;
     text-transform: uppercase;
@@ -71,7 +72,7 @@ body {
     margin: 0 0 12px;
     color: #448cd0;
     font-size: 25px;
-    font-family: JetBrains Mono;
+    font-family: 'JetBrains Mono';
     transition: 0.5s ease;
   }
   
@@ -79,7 +80,7 @@ body {
   // Описуємо поле що нижче імені персонажу
   .description {
     margin: 0 0 50px;
-    font-family: JetBrains Mono;
+    font-family: 'JetBrains Mono';
   }
   
   // Опусуємо блок з кнопками Попередній та Наступний
