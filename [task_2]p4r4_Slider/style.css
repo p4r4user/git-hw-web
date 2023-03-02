@@ -1,0 +1,104 @@
+body {
+  background: #448cd0;
+  color: rgba(0, 0, 0, 0.6);
+  font-family: JetBrains Mono sans-serif;
+  font-size: 14px;
+  line-height: 1.6em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: 0.8s ease;
+}
+
+.btn {
+  border-radius: 2px;
+  padding: 8px 12px;
+  color: #448cd0;
+  font-size: 14px;
+  font-style: bold;
+  font-family: JetBrains Mono;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s ease;
+}
+
+.card {
+  background: #FFFFFF;
+  max-width: 400px;
+  margin: 100px auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  box-sizing: border-box;
+  padding: 48px;
+  text-align: center;
+}
+
+.products {
+  position: relative;
+  overflow: hidden;
+  transition: 0.75s ease;
+}
+
+.product {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.75s ease;
+}
+
+.product.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.thumbnail {
+  margin: 0 0 48px;
+}
+
+.title {
+  margin: 0 0 12px;
+  color: #448cd0;
+  font-size: 25px;
+  font-family: JetBrains Mono;
+  transition: 0.6s ease;
+}
+
+.description {
+  margin: 0 0 50px;
+  font-family: JetBrains Mono;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 -12px -12px;
+}
+
+[ripple] {
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+[ripple] .ripple {
+  position: absolute;
+  background: #FFFFFF;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  transform: scale(0);
+  animation: ripple 3s;
+}
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 0.2;
+  }
+  100% {
+    transform: scale(20);
+    opacity: 0;
+  }
+}/*# sourceMappingURL=style.css.map */

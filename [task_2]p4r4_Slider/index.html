@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Налаштування заголовку з кодування ютф-8, з моєю назвою та підключеним стилем CSS-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p4r4_Sliders</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Клас що містить все що буде міститися на 1-ій карточці слайду-->
+    <div class="card">
+        <!-- Клас продукти що буде містити продукти які потрібні для того щоб відобразити самих себе на слайді -->
+        <div class="products">
+
+          <!-- Перший слайд підписуємо product active , даємо йому айді і задаємо параметр кольору, до якого ми будемо звертатись через Javascript -->
+          <!-- В майбутньому ми будемо передавати клас product active іншим елементам класа продукт -->
+          <!-- Марк Цукерберг -->
+          <div class="product active" product-id="1" product-color="#448cd0">
+            <!-- Підключаю до кожного продукту svg для того щоб було чудове масштаабування -->
+            <div class="thumbnail"><img src="assets\mark_zuckerberg.svg"/></div>
+            <h1 class="title">Марк Еліот Цукерберг</h1>
+            <p class="description">Дозвольте розповісти вам трішки про місьє Цукерберга, великого голову Facebook, або як ми його називаємо, Бессмертного Кіборга! Він ніколи не спить, завжди моніторить ваші повідомлення, фотографії та вподобання. Він має здатність зчитувати ваші думки та побажання і виконувати їх до того, як ви навіть їх висловите! Ну і, звичайно ж, як будь-який Кіборг, він не знає, що таке відпочинок та розваги, тому його завжди можна знайти за роботою, навіть у свято чи вихідний. І хоча він зовні схожий на людину, але я впевнений, що він точно не має серця, як у звичайних смертних. Так що, користуючись Facebook, пам'ятайте - за ним стоїть могутній Кіборг, який не зупиниться перед нічим, щоб задовольнити ваші потреби в соціальних мережах!<br><strong>(ChatGPT once said)</strong></p>
+          </div>
+
+          <!-- Наступні продукти на які ми будемо свапатись, також айді, також колір-->
+          <!-- Уолтер Хартвелл Уайт -->
+          <div class="product" product-id="2" product-color="#27b099">
+            <div class="thumbnail"><img src="assets/heisengberg.svg"/></div>
+            <h1 class="title">Уолтер Хартвелл Уайт</h1>
+            <p class="description">Шкільний вчитель. Діагностика хвороби. Неохайний геній. Наркобарон. Втрата сім'ї. Злочинне уявлення. Смертельно хворий. Руйнація відносин. Надія на виправлення. Самосуд.<br><strong>(ChatGPT once said)</strong></p>
+          </div>
+
+          <!-- Кайл Брофловскі -->
+          <div class="product" product-id="3" product-color="#df8430">
+            <div class="thumbnail"><img src="assets/kyle_broflofski.svg"/></div>
+            <h1 class="title">Кайл Брофловскі</h1>
+            <p class="description">Кайл Брофловскі - один з головних персонажів мультсеріалу "Південний парк", який є євреєм. У шоу він зображується як розумний та емоційний єврей, який часто вступає в дискусії з іншими героями чи євреями на теми, що стосуються різних аспектів життя.
+
+              Крім того, у деяких епізодах серіалу, Кайл представлений як керівник або впливова фігура в Голлівуді. Це певно тому що, ну знаєте...<br><strong>(ChatGPT once said)</strong></p>
+          </div>
+
+          <!-- Ерік Картман -->
+          <div class="product" product-id="4" product-color="#cb2a42">
+            <div class="thumbnail"><img src="assets/eric_cartman.svg"/></div>
+            <h1 class="title">Ерік Картман</h1>
+            <p class="description">Ерік Картман - це одна з найбільш контроверсійних персонажів в історії. З одного боку, він викликає посмішки і глибоко забавляє своїми жорстокими жартами та нещадним характером. Але з іншого боку, за всіма цими вигаданими пригодами, ховається дуже трагічна історія життя цього героя.
+
+              Ерік відрізняється своїм зрадницьким характером та невмирущою жадібністю. Він живе в світі, де кожен день - це боротьба за владу та контроль над іншими. Він відчуває ворожнечу до всього світу, ненавидить своїх батьків, друзів і навіть своїх вчителів. Він живе в постійній боротьбі з усіма, кого вважає своїми ворогами, а це практично кожен, з ким він має стикатися.
+              
+              Той факт, що він ніколи не дійшов до згоди з тим, що світ не обертається навколо нього, став для нього причиною глибокої духовної болі. Його ворожнеча до світу, нарешті, стала для нього причиною справжньої кризи духу.<br><strong>(ChatGPT once said)</strong></p>
+          </div>
+
+          <!-- Рік Санчез -->
+          <div class="product" product-id="5" product-color="#1dd353">
+            <div class="thumbnail"><img src="assets/rick_sanchez.svg"/></div>
+            <h1 class="title">Рік Санчез</h1>
+            <p class="description">Yo, it's your boy Rick Sanchez in the house<br>
+              From dimension C-137, I'm the one and only boss<br>
+              I'm a mad scientist with a flask full of green<br>
+              I'm always looking for adventure, you know what I mean?<br>
+              
+              I've been to different dimensions, seen different sights<br>
+              But my problems, man, they just never seem to take flight<br>
+              I'm always fighting off aliens, or saving the world<br>
+              But deep down, I'm a lonely man, and that's the truth unfurled<br>
+              
+              I lost my wife and daughter, and that's the cross I bear<br>
+              But I keep moving forward, living without a care<br>
+              My grandkids, Morty and Summer, they keep me going strong<br>
+              But they don't know the half of what I've seen, man, it's a lifelong song<br><strong>(ChatGPT once said)</strong></p>
+          </div>
+        <!-- Закриваємо продукти -->
+        </div>
+        <!-- Додаємо кнопки наступній та попередній , встновлюмо сюди хвилястість та її колір(в подальшому будемо це використовувати в JS)-->
+        <div class="footer"><a class="btn" id="prev" href="#" ripple="" ripple-color="#666666"><strong>Попередній</strong></a><a class="btn" id="next" href="#" ripple="" ripple-color="#666666"><strong>Наступний</strong></a></div>
+      <!-- Закриваємо клас карточки -->
+      </div>
+      <!-- Підключаємо Jquery та скрипт -->
+      <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+      <script src="script.js"></script>
+</body>
+</html>
