@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Налаштування заголовку з кодування ютф-8, з моєю назвою та підключеним стилем CSS -->
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>p4r4_Counter</title>
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+	<body>
+		<!-- Лінія що простягається позаду текстових блоків -->
+        <div class="wrapper-line">
+            <div class="line"></div>
+        </div>
+		<!-- Око, з силкою на відсилку -->
+        <div class="eye"><a href="https://uk.wikipedia.org/wiki/%D0%9A%D0%BE%D0%BD'%D1%8E%D0%BD%D0%BA%D1%82%D0%B8%D0%B2%D1%96%D1%82"><img src = "assets/eye.svg"></img></a></div>
+		<!-- Кнопка перезапуску -->
+        <div class = "restart"><button id="restart_btn">ПЕРЕЗАПУСТИТИ<br>ЛІЧИЛЬНИК</button></div>
+		<!-- Стале вікно перевірки результату -->
+		<div class="corner-element">Результат зараз:<br><span class = "lik_preres">[ XXX ]</span></div>
+		<!-- Текстові блоки щоб заповнити простір та мати згоду реалізувати умови завдання -->
+		<div class="container">[ ХОКУ ПРО ООП ]<br><br>Об'єкти мов коду,<br>Методи, властивості й так<br>-ООП в дії.</div>
+        <div class="container">[ ХОКУ ПРО ПОЛІМОРФІЗМ ]<br><br>Форми без межі,<br>Поліморфізм кодує,<br>Функції в об'єктах.</div>
+        <div class="container">[ ХОКУ ПРО ДЖАВАСКРІПТ ]<br><br>Код веб-сторінок,<br>Динамічність та зручність,<br>Джаваскріпт живе.</div>
+        <div class="container">[ ХОКУ ПРО ПІТОН ]<br><br>Мова простоти,<br>Красива та зрозуміла,<br>Python - диво.</div>
+        <div class="container">[ ХОКУ ПРО ЗАВДАННЯ ]<br><br>Мишкою скролиш,<br>Сторінки ніби листаєш,<br>Курсор пливе вниз.</div>
+		<!-- Головний елемент задачі -->
+        <div class="task_container">[ САМА СУТЬ ЗАВДАННЯ ]<br><span class="lik_res">[ XXX ]</span></div>
+		<!-- Підключення скрипту -->
+		<script src="script.js"></script>
+	</body>
+</html>

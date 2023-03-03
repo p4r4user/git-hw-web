@@ -1,0 +1,190 @@
+/* Імпорт шрифту */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@600&display=swap');
+
+/* Налаштування тла */
+body {
+	background: #4d5198;
+	font-family: 'JetBrains Mono', monospace;
+    position: relative;
+}
+
+/* Налаштування класичного контейнеру-заповнювача, доданий градіент, тіні, розмірі, позиціювання тексту та таке інше */
+.container {
+	margin: 50px auto;
+	text-align: center;
+    font-size: 18px;
+	background: linear-gradient(315deg, #e6b8d0, #ffdaf7);
+	width: 500px;
+	padding: 50px 0;
+	border-radius: 23px;
+	overflow: hidden;
+	box-shadow: -10px -10px 30px #5357a1,
+    10px 10px 30px #7579c4;;
+}
+
+/* Окремі налаштування для блоку з завданням, так як це ключовий елемент по якому я буду орієнтуватись */
+.task_container {
+    margin: 50px auto;
+	text-align: center;
+    font-size: 20px;
+	background: linear-gradient(315deg, #e6b8d0, #ffdaf7);
+	width: 500px;
+	padding: 50px 0;
+	border-radius: 23px;
+	overflow: hidden;
+	box-shadow: -10px -10px 30px #5357a1,
+    10px 10px 30px #7579c4;;
+}
+
+/* обгортка для бекграундної лінії */
+.wrapper-line {
+	display: flex;
+	justify-content: center;
+}
+
+/* сама лінія */
+.line {
+	position: absolute;
+	width: 10px;
+	height: 103%;
+    background: linear-gradient(237deg, rgba(182,208,184,1) 0%, rgba(94,132,152,1) 100%);
+	z-index: -1;
+	border-radius: 10px;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+/* налаштування блоку з кнопкою рестарта */
+.restart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Налаштування ока */
+.eye {
+    display: flex;
+    justify-content:center;
+    position: relative;
+    top: -38px;
+}
+
+/* Налаштування сталого елементу що показує результат, не находячись позиції з каунтером */
+.corner-element{
+    position: fixed;
+    border-radius: 10px;
+    background: #daf2dc;
+    box-shadow:  20px 20px 60px #b9cebb,
+             -20px -20px 60px #fbfffd;
+    width: 180px;
+    overflow: hidden;
+    padding: 25px 0;
+    text-align: center;
+    left: -5px;
+}
+
+
+/* Налаштування глітч-кнопки з криком про допомогу */
+button,
+/* Базове налаштування кнопки, що просто показується */
+button::after {
+ padding: 16px 20px;
+ font-size: 18px;
+ font-family: "JetBrains Mono";
+ background: linear-gradient(45deg, transparent 5%, #9d00ff 5%);
+ border: 0;
+ color: #fff;
+ letter-spacing: 3px;
+ line-height: 1;
+ box-shadow: 6px 0px 0px #00f6d1;
+ outline: transparent;
+ position: relative;
+ cursor: pointer;
+}
+
+/* налаштування кнопку та її слайсування при наведенні на неї курсором */
+button::after {
+ --slice-0: inset(50% 50% 50% 50%);
+ --slice-1: inset(80% -6px 0 0);
+ --slice-2: inset(50% -6px 30% 0);
+ --slice-3: inset(10% -6px 85% 0);
+ --slice-4: inset(40% -6px 43% 0);
+ --slice-5: inset(80% -6px 5% 0);
+ /* ;) */
+ content: "ПОМОГИТЕ!!- HELP 帮助_ -POMOC !AIDE<->ДОПОМОЖІТЬ!";
+ display: block;
+ position: absolute;
+ /* Розташування глюку відносно базової кнопки */
+ top: 2;
+ left: 0;
+ right: 2;
+ bottom: 0;
+ background: linear-gradient(45deg, transparent 3%, #00e6f6 3%, #00e6f6 5%, #ff013c 5%);
+ text-shadow: -3px -3px 0px #f8f005, 3px 3px 0px #00e6f6;
+ clip-path: var(--slice-0);
+}
+
+/* Запуск анімації */
+button:hover::after {
+ animation: 3.6s glitch;
+ animation-timing-function: steps(2, end);
+}
+
+
+/* Сама анімація */
+@keyframes glitch {
+ 0% {
+  clip-path: var(--slice-1);
+  transform: translate(-20px, -10px);
+ }
+
+ 10% {
+  clip-path: var(--slice-3);
+  transform: translate(10px, 10px);
+ }
+
+ 20% {
+  clip-path: var(--slice-1);
+  transform: translate(-10px, 10px);
+ }
+
+ 30% {
+  clip-path: var(--slice-3);
+  transform: translate(0px, 5px);
+ }
+
+ 40% {
+  clip-path: var(--slice-2);
+  transform: translate(-5px, 0px);
+ }
+
+ 50% {
+  clip-path: var(--slice-3);
+  transform: translate(5px, 0px);
+ }
+
+ 60% {
+  clip-path: var(--slice-4);
+  transform: translate(5px, 10px);
+ }
+
+ 70% {
+  clip-path: var(--slice-2);
+  transform: translate(-10px, 10px);
+ }
+
+ 80% {
+  clip-path: var(--slice-5);
+  transform: translate(20px, -10px);
+ }
+
+ 90% {
+  clip-path: var(--slice-1);
+  transform: translate(-10px, 0px);
+ }
+
+ 100% {
+  clip-path: var(--slice-1);
+  transform: translate(0);
+ }
+}
