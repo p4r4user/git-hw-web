@@ -45,6 +45,7 @@ body {
 /* сама лінія */
 .line {
 	position: absolute;
+    margin: 0 auto;
 	width: 10px;
 	height: 103%;
     background: linear-gradient(237deg, rgba(182,208,184,1) 0%, rgb(92, 124, 141) 100%);
@@ -63,6 +64,8 @@ body {
 
 /* Налаштування ока */
 .eye {
+    margin: 0 auto;
+    align-items: center;
     display: flex;
     justify-content:center;
     position: relative;
@@ -187,4 +190,27 @@ button:hover::after {
   clip-path: var(--slice-1);
   transform: translate(0);
  }
+}
+
+
+/* !Адаптив для телефонів! */
+@media (max-width: 1024px) {
+	body {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+	.container {
+		width: 100%;
+		font-size: 16px;
+	}
+
+	.task_container {
+		width: 100%;
+	}
+	.corner-element {
+		left: 0;
+		top: 60px;
+	}
 }
