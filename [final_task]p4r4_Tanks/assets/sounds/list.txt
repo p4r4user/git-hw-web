@@ -1,0 +1,6 @@
+1)fire
+2)explosion
+3)tank destroyed
+4)win
+5)loose
+6)backsoundtrack

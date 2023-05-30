@@ -232,7 +232,7 @@ export default class Stage extends EventEmitter {
         this.enemyTankCount -= 1;
 
         this.totalCounter += 1;
-        if(this.totalCounter === 2){
+        if(this.totalCounter === 1){
             this.emit("win");
         }
 

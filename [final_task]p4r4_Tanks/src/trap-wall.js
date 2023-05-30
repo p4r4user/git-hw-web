@@ -1,6 +1,7 @@
 import { TRAP_WALL_SPRITES } from './constants.js';
 import Wall from './wall.js';
 
+//TODO: TrapInteractionPlayer, coalision, effect
 export default class SteelWall extends Wall {
     constructor(args) {
         super(args);
