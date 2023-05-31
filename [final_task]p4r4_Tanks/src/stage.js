@@ -7,6 +7,12 @@ import SteelWall from './steel-wall.js';
 import PlayerTank from './player-tank.js';
 import EnemyTank from './enemy-tank.js';
 
+
+var destroy_enemy_sound = new Audio('./assets/sounds/destroy_enemy.wav');
+
+
+
+//TODO: realise stage+=1 onWin, stage = 0 onGameOver, containing this data in local storage
 export default class Stage extends EventEmitter {
     static createObject(type, args) {
         switch (type) {
@@ -111,6 +117,7 @@ export default class Stage extends EventEmitter {
                 this.objects.add(explosion);
 
                 explosion.on('destroyed', () => {
+
                     this.objects.delete(explosion);
                 });
             });
@@ -230,11 +237,16 @@ export default class Stage extends EventEmitter {
     removeEnemyTank(enemyTank) {
         this.objects.delete(enemyTank);
         this.enemyTankCount -= 1;
-
+        play_destroy_enemy_sound();
         this.totalCounter += 1;
-        if(this.totalCounter === 1){
+        if(this.totalCounter === 4){
             this.emit("win");
         }
 
     }
+}
+
+function play_destroy_enemy_sound(){
+    destroy_enemy_sound.currentTime = 0;
+    destroy_enemy_sound.play();
 }

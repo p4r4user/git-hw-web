@@ -83,7 +83,7 @@ body {
 }
 
 /* Кнопки результатів */
-.button {
+.reload_button {
 	border-radius: 7px;
 	border: none;
 	background: #18ffd5;

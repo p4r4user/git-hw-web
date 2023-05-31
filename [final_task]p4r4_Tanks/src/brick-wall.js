@@ -1,6 +1,9 @@
 import { Direction, BRICK_WALL_SPRITES, BRICK_WALL_SPRITE_MAP } from './constants.js';
 import Wall from './wall.js';
 
+var brick_hit_sound = new Audio('./assets/sounds/bullet_brick_hit.wav');
+    brick_hit_sound.volume = 0.75;
+
 export default class BrickWall extends Wall {
     constructor(args) {
         super(args);
@@ -22,6 +25,7 @@ export default class BrickWall extends Wall {
     }
 
     hit(bullet) {
+        play_bullet_brick_hit_sound();
         if (this.isDestroyed) return;
 
         
@@ -43,4 +47,9 @@ export default class BrickWall extends Wall {
                 break;
         }
     }
+}
+
+function play_bullet_brick_hit_sound(){
+    brick_hit_sound.currentTime = 0;
+    brick_hit_sound.play();
 }

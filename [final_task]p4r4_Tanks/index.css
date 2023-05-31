@@ -9,11 +9,24 @@ body {
     align-items: center;
 }
 
-.box {
+.result_box {
     display: none;
     height: 640px;
     width: 640px;
     background-color: #b62f43;
+    border-radius: 20px;
+    column-gap: 50px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px  ;
+}
+
+.start_box{
+    display: flex   ;
+    height: 640px;
+    width: 640px;
+    /*background-image: url('assets/images/start_menu.png');*/
+    background-color: #0f1923;
     border-radius: 20px;
     column-gap: 50px;
     justify-content: center;
@@ -39,7 +52,7 @@ body {
 }
 
 
-.button {
+.reload_button {
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
@@ -56,8 +69,8 @@ body {
     transition: all .15s ease;
 }
 
-.button::before,
-.button::after {
+.reload_button::before,
+.reload_button::after {
     content: '';
     display: block;
     position: absolute;
@@ -68,32 +81,32 @@ body {
     transition: all .15s ease;
 }
 
-.button::before {
+.reload_button::before {
     top: 0;
     border-bottom-width: 0;
 }
 
-.button::after {
+.reload_button::after {
     bottom: 0;
     border-top-width: 0;
 }
 
-.button:active,
-.button:focus {
+.reload_button:active,
+.reload_button:focus {
     outline: none;
 }
 
-.button:active::before,
-.button:active::after {
+.reload_button:active::before,
+.reload_button:active::after {
     right: 3px;
     left: 3px;
 }
 
-.button:active::before {
+.reload_button:active::before {
     top: 3px;
 }
 
-.button:active::after {
+.reload_button:active::after {
     bottom: 3px;
 }
 
@@ -147,14 +160,115 @@ body {
     font-family: "JetBrains Mono";
 }
 
-.button:hover {
+.reload_button:hover {
     color: #0f1923;
 }
 
-.button:hover .button_sl {
+.reload_button:hover .button_sl {
     width: calc(100% + 15px);
 }
 
-.button:hover .button_lg::after {
+.reload_button:hover .button_lg::after {
     background-color: #fff;
+}
+
+
+button {
+    background: transparent;
+    color: #fff;
+    border: 3px solid #fff;
+    border-radius: 50px;
+    padding: 0.8rem 2rem;
+    font: 40px "JetBrains Mono";
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    transition: 0.2s ease-in-out;
+    letter-spacing: 2px;
+}
+
+.name {
+    width: 100%;
+    text-align: center;
+    padding: 0 0 3rem;
+    padding-top: 4rem;
+    font: 500 14px "JetBrains Mono", sans-serif;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.button-parrot .parrot {
+    position: absolute;
+    width: 60px;
+    text-align: center;
+    animation: blink 0.8s infinite;
+    color: transparent;
+}
+
+.button-parrot .parrot:before {
+    content: "Клацни по мені!";
+}
+
+.button-parrot .parrot:nth-child(1) {
+    top: -30px;
+    left: -40px;
+    font: 12px/1 "JetBrains Mono", sans-serif;
+    transform: rotate(-20deg);
+    animation-duration: 0.5s;
+}
+
+.button-parrot .parrot:nth-child(2) {
+    font: 12px/1 "JetBrains Mono", sans-serif;
+    right: -40px;
+    top: -20px;
+    transform: rotate(15deg);
+    animation-duration: 0.3s;
+}
+
+.button-parrot .parrot:nth-child(3) {
+    font: 16px/1 "JetBrains Mono", sans-serif;
+    top: -60px;
+    left: 15px;
+    transform: rotate(10deg);
+    animation-duration: 1s;
+}
+
+.button-parrot .parrot:nth-child(4) {
+    font: 18px/1 "JetBrains Mono", sans-serif;
+    top: -70px;
+    left: 95px;
+    transform: rotate(2deg);
+    animation-duration: 0.7s;
+}
+
+.button-parrot .parrot:nth-child(5) {
+    font: 14px/1 "JetBrains Mono", sans-serif;
+    top: 80px;
+    left: 105px;
+    transform: rotate(-20deg);
+    animation-duration: 0.8s;
+}
+
+.button-parrot .parrot:nth-child(6) {
+    font: 12px/1 "JetBrains Mono", sans-serif;
+    top: 80px;
+    left: 5px;
+    transform: rotate(10deg);
+    animation-duration: 1.2s;
+}
+
+.button-parrot button:hover .parrot:before {
+    content: "!!! НУЖБО !!!";
+    width: 70px;
+}
+
+@keyframes blink {
+    25%, 75% {
+        color: transparent;
+    }
+
+    40%, 60% {
+        color: #fff;
+    }
 }

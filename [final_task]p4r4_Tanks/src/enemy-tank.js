@@ -29,6 +29,8 @@ export default class EnemyTank extends Tank {
     }
 
     update({ world, frameDelta }) {
+        const shouldFire = Math.random() < 0.75; // 75% шанс вистрілу
+
         if (this.isDestroyed) {
             this.explode();
             this.destroy();
@@ -39,7 +41,9 @@ export default class EnemyTank extends Tank {
         const value = Tank.getValueForDirection(direction);
 
         this.move(axis, value);
-        this.fire();
+        if (shouldFire) {
+            this.fire();
+        }
         this.animate(frameDelta);
 
         const isOutOfBounds = world.isOutOfBounds(this);
@@ -66,10 +70,13 @@ export default class EnemyTank extends Tank {
         return this.turnTimer > ENEMY_TANK_TURN_TIMER_THRESHOLD;
     }
 
+
+
     turnRandomly() {
         const randomDirection = Math.floor(Math.random() * 4);
 
-        this.turnTimer = 0;
-        this.turn(randomDirection);
+        this.turnTimer = setTimeout(() => {
+            this.turn(randomDirection);
+        }, 1250);
     }
 }

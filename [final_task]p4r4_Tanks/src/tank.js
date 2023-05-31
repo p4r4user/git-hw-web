@@ -2,7 +2,8 @@ import { Direction, TILE_SIZE, TANK_WIDTH, TANK_HEIGHT, TANK_SPEED, TANK_TURN_TH
 import GameObject from './game-object.js';
 import Bullet from './bullet.js';
 import TankExplosion from './tank-explosion.js';
-
+var fire_sound =  new Audio('./assets/sounds/bullet_fire.wav');
+fire_sound.volume = 0.5;
 export default class Tank extends GameObject {
     constructor(args) {
         super(args);
@@ -91,6 +92,9 @@ export default class Tank extends GameObject {
             });
 
             this.emit('fire', this.bullet);
+
+            play_fire_sound();
+
         }
     }
 
@@ -98,6 +102,8 @@ export default class Tank extends GameObject {
         this.explode();
         this.destroy();
     }
+
+
 
     explode() {
         if (this.isExploding) return;
@@ -135,4 +141,8 @@ export default class Tank extends GameObject {
             this.top + this.height * 0.5
         ];
     }
+}
+function play_fire_sound(){
+    fire_sound.currentTime = 0;
+    fire_sound.play();
 }
